@@ -1,5 +1,14 @@
+var webpack = require('webpack');
+
 module.exports = {
-	entry: "./app-client",
+	devtool: "source-map",
+	// devServer:{
+	// 	inline: true,
+	// 	hot: true
+	// },
+	entry:[
+			"./app-client",
+		  ],
 	output: {
 		filename: "bundle.js",
 		path: __dirname + "/public",
@@ -10,9 +19,12 @@ module.exports = {
 			{
 				test: /\.js$/,
 				exclude: /node_modules/,
-				loader: 'babel-loader'
+				loader: 'babel'
 			}
 		]
-	}
+	},
+	// plugins: [
+	// 			new webpack.HotModuleReplacementPlugin()
+	// 		 ]
 
 }
