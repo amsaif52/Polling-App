@@ -29,6 +29,9 @@ export default class APP extends Component{
 		return (
 			<div>
 				<Header status={this.state.status} title={this.state.title}/>
+				<div {...state}>
+					{this.props.children}
+				</div>
 			</div>
 		)
 	}

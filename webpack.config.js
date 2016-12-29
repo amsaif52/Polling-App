@@ -2,10 +2,6 @@ var webpack = require('webpack');
 
 module.exports = {
 	devtool: "source-map",
-	// devServer:{
-	// 	inline: true,
-	// 	hot: true
-	// },
 	entry:[
 			"./app-client",
 		  ],
@@ -22,9 +18,5 @@ module.exports = {
 				loader: 'babel'
 			}
 		]
-	},
-	// plugins: [
-	// 			new webpack.HotModuleReplacementPlugin()
-	// 		 ]
-
+	}
 }
